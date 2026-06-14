@@ -1,0 +1,42 @@
+{
+  "name": "-mintradefer",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@tailwindcss/vite": "^4.3.0",
+    "@tanstack/vue-query": "^5.101.0",
+    "@tanstack/vue-query-devtools": "^6.1.34",
+    "ant-design-vue": "^4.2.6",
+    "axios": "^1.17.0",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.21",
+    "nprogress": "^0.2.0",
+    "pinia": "^3.0.3",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^12.2.0",
+    "tailwindcss": "^4.3.0",
+    "vue": "^3.5.22",
+    "vue-i18n": "^11.4.4",
+    "vue-router": "^4.5.1",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-sonner": "^2.0.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "prettier": "3.6.2",
+    "unplugin-vue-components": "^32.1.0",
+    "vite": "^7.1.7",
+    "vite-plugin-vue-devtools": "^8.0.2"
+  }
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-poppins: 'Roboto Condensed', sans-serif;
+  /* Colors */
+  --color-main-color: #3c2ca1;
+  --color-button-hover-color: #312876;
+  --color-shade-color: #dee6fb;
+  --color-bg-color: #fcfcfc;
+  --color-white: #ffffff;
+  --color-stroke-color: #cccccc;
+  --color-text-color: #232323;
+  --color-placeholder-text-color: #949494;
+
+  /* Shadows */
+  --drop-shadow-one: 0px 10px 25px 0px rgba(33, 26, 76, 0.06);
+  --drop-shadow-two: 0px 3px 8px 0px rgba(33, 26, 76, 0.2);
+
+  /* Custom Breakpoints */
+  --breakpoint-minPhone: 320px;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  color: var(--text-color);
+  background: var(--white);
+
+  font-family: var(--font-poppins);
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  border: none;
+  outline: none;
+}
+
+:root {
+  --main-color: #3c2ca1;
+  --button-hover-color: #312876;
+  --shade-color: #dee6fb;
+  --bg-color: #fcfcfc;
+  --white: #ffffff;
+  --stroke-color: #cccccc;
+  --text-color: #232323;
+  --placeholder-text-color: #949494;
+  --font-family: 'Visby', sans-serif;
+  --drop-shadow-one: 0px 10px 25px 0px rgba(33, 26, 76, 0.06);
+  --drop-shadow-two: 0px 3px 8px 0px rgba(33, 26, 76, 0.2);
+}
+
+.truncate-2-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate-3-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
