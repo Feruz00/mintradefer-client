@@ -65,5 +65,12 @@
   "international_tenders": "International tenders",
   "download": "Download",
   "phone": "Phone Number",
-  "address": "Address"
+  "address": "Address",
+  "web_url": "Web url",
+  "day": "Day",
+  "days": "Days",
+  "hour": "Hour",
+  "hours": "Hours",
+  "minute": "Minute",
+  "minutes": "Minutes"
 }

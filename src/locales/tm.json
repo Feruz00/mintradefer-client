@@ -67,5 +67,12 @@
   "international_tenders": "Halkara tenderler",
   "download": "Ýükläp al",
   "phone": "Telefon belgisi",
-  "address": "Salgysy"
+  "address": "Salgysy",
+  "web_url": "Web salgysy",
+  "day": "Gün",
+  "days": "Gün",
+  "hour": "Sagat",
+  "hours": "Sagat",
+  "minute": "Minut",
+  "minutes": "Minut"
 }

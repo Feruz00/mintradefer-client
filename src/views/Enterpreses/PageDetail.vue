@@ -107,6 +107,19 @@
             {{ data.data.fax }}
           </p>
         </div>
+        <div class="bg-white rounded-3xl shadow-lg p-6">
+          <h3 class="font-semibold text-indigo-700 mb-3">{{ t('web_url') }}</h3>
+
+          <a-button
+            type="link"
+            :href="data.data.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-700"
+          >
+            {{ data.data.url }}
+          </a-button>
+        </div>
       </div>
     </div>
 

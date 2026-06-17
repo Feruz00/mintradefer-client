@@ -67,5 +67,12 @@
   "international_tenders": "Международные тендеры",
   "download": "Скачать",
   "phone": "Номер телефона",
-  "address": "Адрес"
+  "address": "Адрес",
+  "web_url": "Ссылка",
+  "day": "День",
+  "days": "Дни",
+  "hour": "Час",
+  "hours": "Часы",
+  "minute": "Минута",
+  "minutes": "Минуты"
 }

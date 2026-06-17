@@ -149,15 +149,13 @@ const formatTime = (targetDate) => {
 
   const diff = end - now
 
-  // ✅ hide if past date
   if (diff <= 0) return null
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24))
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24)
   const minutes = Math.floor((diff / (1000 * 60)) % 60)
-  const seconds = Math.floor((diff / 1000) % 60)
 
-  return `${String(days).padStart(2, '0')}:${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+  return `${days} ${t('days')} ${hours} ${t('hours')} ${minutes} ${t('minutes')}`
 }
 
 const startCountdown = (date) => {
