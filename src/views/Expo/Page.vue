@@ -155,7 +155,7 @@ const formatTime = (targetDate) => {
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24)
   const minutes = Math.floor((diff / (1000 * 60)) % 60)
 
-  return `${days} ${t('days')} ${hours} ${t('hours')} ${minutes} ${t('minutes')}`
+  return `${days} ${t('day')} ${hours} ${t('hour')} ${minutes} ${t('minute')}`
 }
 
 const startCountdown = (date) => {
