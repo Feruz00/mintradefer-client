@@ -47,7 +47,7 @@
       class="w-full max-w-[343px] mx-auto xl:mx-0 px-6 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-10 bg-shade-color rounded-l-[30px] flex items-center justify-center"
     >
       <p class="font-semibold text-sm sm:text-base text-text-color text-center">
-        {{ t('company') }}
+        {{ getTitle(company.company, locale) }}
       </p>
     </div>
   </div>
@@ -116,8 +116,10 @@ import PostCard from '@/common/PostCard.vue'
 import NoData from '@/common/NoData.vue'
 import ContactSection from '@/components/ContactSection.vue'
 import { getContent, getTitle } from '@/utils/getData'
+import useCompany from '@/stores/counter'
 const server = import.meta.env.VITE_API_URL
 const { t, locale } = useI18n()
+const company = useCompany()
 const page = ref(1)
 const limit = ref(6)
 const router = useRouter()

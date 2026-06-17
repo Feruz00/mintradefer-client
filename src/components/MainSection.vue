@@ -4,7 +4,7 @@
     <h1
       class="text-center w-full mx-auto text-white font-semibold leading-snug cursor-default text-xl sm:text-2xl md:text-3xl lg:text-4xl px-4 md:px-0 max-w-5xl py-12 lg:pb-40"
     >
-      {{ t('company') }}
+      {{ getTitle(company.company, locale) }}
     </h1>
     <Banner />
   </div>
@@ -13,6 +13,8 @@
 import Navbar from '@/common/Navbar.vue'
 import { useI18n } from 'vue-i18n'
 import Banner from '../common/Banner.vue'
-
-const { t } = useI18n()
+import { getTitle } from '@/utils/getData'
+import useCompany from '@/stores/counter'
+const company = useCompany()
+const { t, locale } = useI18n()
 </script>

@@ -14,7 +14,7 @@
           {{ t('contact_us') }}
         </h1>
         <p class="text-base font-medium cursor-default text-placeholder-text-color">
-          {{ t('company') }}
+          {{ getTitle(company.company, locale) }}
         </p>
       </div>
       <div
@@ -134,8 +134,12 @@ import { toast } from 'vue-sonner'
 import { useI18n } from 'vue-i18n'
 import { useGetContact, useSendContact } from '@/services/useContact'
 import Navbar from '@/common/Navbar.vue'
+import { getTitle } from '@/utils/getData'
+import useCompany from '@/stores/counter'
 
-const { t } = useI18n()
+const company = useCompany()
+
+const { t, locale } = useI18n()
 
 const { isLoading, data, error, isError, refetch } = useGetContact()
 

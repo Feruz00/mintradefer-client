@@ -12,7 +12,7 @@
     >
       <div class="grid gap-8 xl:gap-16">
         <h2 class="font-medium text-white text-base xl:text-lg truncate-3-lines">
-          {{ t('company') }}
+          {{ getTitle(company.company, locale) }}
         </h2>
 
         <div class="grid gap-8">
@@ -80,7 +80,7 @@
       </div>
 
       <p class="font-medium text-white cursor-default text-[10px] xl:text-sm">
-        {{ t('company') }}
+        {{ getTitle(company.company, locale) }}
       </p>
     </div>
   </div>
@@ -88,6 +88,8 @@
 
 <script setup>
 import { useGetContact } from '@/services/useContact'
+import useCompany from '@/stores/counter'
+import { getTitle } from '@/utils/getData'
 import {
   ArrowUpOutlined,
   CopyrightOutlined,
@@ -96,8 +98,8 @@ import {
   PhoneOutlined,
 } from '@ant-design/icons-vue'
 import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const company = useCompany()
+const { t, locale } = useI18n()
 const { isLoading, data, error, isError } = useGetContact()
 
 const scrollToTop = () => {

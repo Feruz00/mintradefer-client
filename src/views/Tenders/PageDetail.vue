@@ -92,7 +92,7 @@
       class="rounded-l-[30px] minPhone:py-[52px] minPhone:px-8 xl:py-[72px] xl:px-14 bg-shade-color w-[343px] h-[90px] place-self-end grid place-content-center top-0 minPhone:relative xl:absolute cursor-default"
     >
       <p class="font-semibold minPhone:text-sm xl:text-base text-text-color">
-        {{ t('company') }}
+        {{ getTitle(company.company, locale) }}
       </p>
     </div>
   </div>
@@ -104,6 +104,7 @@ import Error from '@/common/Error.vue'
 import Loading from '@/common/Loading.vue'
 import Navbar from '@/common/Navbar.vue'
 import { useGetTender } from '@/services/useTenders'
+import useCompany from '@/stores/counter'
 import { getContent, getTitle } from '@/utils/getData'
 import { ArrowLeftOutlined, HomeOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons-vue'
 import dayjs from 'dayjs'
@@ -112,7 +113,7 @@ import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 
 const server = import.meta.env.VITE_API_URL
-
+const company = useCompany()
 const route = useRoute()
 const postId = computed(() => route.params.id)
 const { t, locale } = useI18n()

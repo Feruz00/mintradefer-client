@@ -54,7 +54,7 @@
       class="rounded-l-[30px] minPhone:py-[52px] minPhone:px-8 xl:py-[72px] xl:px-14 bg-shade-color w-[343px] h-[90px] place-self-end grid place-content-center top-0 minPhone:relative xl:absolute cursor-default"
     >
       <p class="font-semibold minPhone:text-sm xl:text-base text-text-color">
-        {{ t('company') }}
+        {{ getTitle(company.company, locale) }}
       </p>
     </div>
   </div>
@@ -77,9 +77,10 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import { useI18n } from 'vue-i18n'
 import ContactSection from '@/components/ContactSection.vue'
 import { getContent, getTitle } from '@/utils/getData'
+import useCompany from '@/stores/counter'
 
 const server = import.meta.env.VITE_API_URL
-
+const company = useCompany()
 const route = useRoute()
 const postId = computed(() => route.params.id)
 const { t, locale } = useI18n()

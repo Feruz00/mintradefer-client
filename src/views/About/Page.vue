@@ -51,7 +51,7 @@
       class="rounded-l-[30px] minPhone:py-[52px] minPhone:px-8 xl:py-[72px] xl:px-14 bg-shade-color w-[343px] h-[90px] place-self-end grid place-content-center undefined cursor-default"
     >
       <p class="font-semibold text-sm lg:text-base text-indigo-800 text-center">
-        {{ t('company') }}
+        {{ getTitle(company.company, locale) }}
       </p>
     </div>
   </div>
@@ -190,10 +190,13 @@ import Error from '@/common/Error.vue'
 import image1 from '@/assets/about_1.jpg'
 import image2 from '@/assets/about_2.jpg'
 import ContactSection from '@/components/ContactSection.vue'
+import { getTitle } from '@/utils/getData'
+import useCompany from '@/stores/counter'
 
 const server = import.meta.env.VITE_API_URL
+const company = useCompany()
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { isLoading, data, isError, refetch } = useGetBanner()
 const getImage = (item) => {
   return item?.files?.length
